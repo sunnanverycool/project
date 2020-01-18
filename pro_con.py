@@ -3,6 +3,9 @@ import time
 import threading
 table=queue.Queue(50)
 a=0
+
+
+
 def dad(table,t):
     while 1:
         time.sleep(t)
@@ -48,7 +51,6 @@ def tongxue(table,t):
 
 p1 = threading.Thread(target=dad,args=[table, 2.4])
 p2 = threading.Thread(target=mom,args=[table, 1.9])
-
 p1.start()
 p2.start()
 
